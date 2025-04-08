@@ -1,0 +1,162 @@
+[gd_scene load_steps=27 format=3 uid="uid://cifb60gi1tymb"]
+
+[ext_resource type="Script" uid="uid://dp1vc6sekeedb" path="res://scripts/fuegofatuo.gd" id="1_hn3dd"]
+[ext_resource type="Texture2D" uid="uid://jlfymtjaqhwk" path="res://recursos/sprites/fuego fatuo/fuego1.png" id="2_qc6im"]
+[ext_resource type="Texture2D" uid="uid://dp3r7rtgtonj4" path="res://recursos/sprites/fuego fatuo/fuego2.png" id="3_j2bqn"]
+[ext_resource type="Texture2D" uid="uid://dyl4valkyqrcy" path="res://recursos/sprites/fuego fatuo/fuego3.png" id="4_q2ypx"]
+[ext_resource type="Texture2D" uid="uid://c54a06344xb2i" path="res://recursos/sprites/fuego fatuo/fuego4.png" id="5_kyrqs"]
+[ext_resource type="Texture2D" uid="uid://doenu5skf2tk5" path="res://recursos/sprites/fuego fatuo/fuego.png" id="6_4aumd"]
+[ext_resource type="Texture2D" uid="uid://doafs2c77c7lo" path="res://recursos/sprites/fuego fatuo/mov1.png" id="7_q2ypx"]
+[ext_resource type="Texture2D" uid="uid://bdc8fg8mwtqlf" path="res://recursos/sprites/fuego fatuo/mov2.png" id="8_kyrqs"]
+[ext_resource type="Texture2D" uid="uid://clu8ciout1uq0" path="res://recursos/sprites/fuego fatuo/mov3.png" id="9_4aumd"]
+[ext_resource type="Texture2D" uid="uid://dh0wfh1shmih8" path="res://recursos/sprites/fuego fatuo/mov4.png" id="10_rli5y"]
+[ext_resource type="Texture2D" uid="uid://2fb847oia8ul" path="res://recursos/sprites/fuego fatuo/mov.png" id="11_cqtf8"]
+[ext_resource type="Texture2D" uid="uid://bri23vrkkqdt2" path="res://recursos/sprites/fuego fatuo/0.png" id="12_rli5y"]
+[ext_resource type="Texture2D" uid="uid://cls430v3i5gyq" path="res://recursos/sprites/fuego fatuo/1.png" id="13_cqtf8"]
+[ext_resource type="Texture2D" uid="uid://bgeedsny7vfr4" path="res://recursos/sprites/fuego fatuo/2.png" id="14_ewvhp"]
+[ext_resource type="Texture2D" uid="uid://c0l5835torcmg" path="res://recursos/sprites/health_bar/vida vacia mejor.png" id="15_ady61"]
+[ext_resource type="Texture2D" uid="uid://plblwssu6ir5" path="res://recursos/sprites/fuego fatuo/3.png" id="15_g6eae"]
+[ext_resource type="Texture2D" uid="uid://b3i5mfkpo7qbm" path="res://recursos/sprites/health_bar/vida enemigo llena.png" id="16_ovpkv"]
+[ext_resource type="Texture2D" uid="uid://xoxctd1cn7uh" path="res://recursos/sprites/fuego fatuo/4.png" id="16_x0kjx"]
+[ext_resource type="Texture2D" uid="uid://opn4pxi5o71x" path="res://recursos/sprites/fuego fatuo/5.png" id="17_0mpod"]
+[ext_resource type="Texture2D" uid="uid://sngsutpt0erj" path="res://recursos/sprites/fuego fatuo/6.png" id="18_oxcax"]
+[ext_resource type="Texture2D" uid="uid://dtnr5p68bmivq" path="res://recursos/sprites/fuego fatuo/7.png" id="19_hy6x8"]
+[ext_resource type="Texture2D" uid="uid://dnhpxdlm5exx0" path="res://recursos/sprites/fuego fatuo/8.png" id="20_ady61"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t68s2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_qc6im")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_j2bqn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_q2ypx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_kyrqs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_4aumd")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_q2ypx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_kyrqs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_4aumd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_rli5y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_cqtf8")
+}],
+"loop": true,
+"name": &"movimiento",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.4,
+"texture": ExtResource("12_rli5y")
+}, {
+"duration": 0.4,
+"texture": ExtResource("13_cqtf8")
+}, {
+"duration": 0.4,
+"texture": ExtResource("14_ewvhp")
+}, {
+"duration": 0.4,
+"texture": ExtResource("15_g6eae")
+}, {
+"duration": 0.4,
+"texture": ExtResource("16_x0kjx")
+}, {
+"duration": 0.4,
+"texture": ExtResource("17_0mpod")
+}, {
+"duration": 0.4,
+"texture": ExtResource("18_oxcax")
+}, {
+"duration": 0.4,
+"texture": ExtResource("19_hy6x8")
+}, {
+"duration": 0.4,
+"texture": ExtResource("20_ady61")
+}],
+"loop": false,
+"name": &"muerte",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ea76c"]
+radius = 5.51571
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oiuxq"]
+size = Vector2(8, 15)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gfc0k"]
+size = Vector2(40, 67)
+
+[node name="fuegofatuo" type="Node2D"]
+
+[node name="fuegofatuo" type="CharacterBody2D" parent="."]
+script = ExtResource("1_hn3dd")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="fuegofatuo"]
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_t68s2")
+animation = &"muerte"
+
+[node name="Area2D" type="Area2D" parent="fuegofatuo/AnimatedSprite2D"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fuegofatuo/AnimatedSprite2D/Area2D"]
+position = Vector2(1, 0)
+scale = Vector2(17.1454, 16.6029)
+shape = SubResource("CircleShape2D_ea76c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fuegofatuo"]
+position = Vector2(0, 2)
+scale = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_oiuxq")
+
+[node name="hitbox_sombra" type="Area2D" parent="fuegofatuo"]
+collision_layer = 7
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fuegofatuo/hitbox_sombra"]
+position = Vector2(0, 2.5)
+shape = SubResource("RectangleShape2D_gfc0k")
+
+[node name="cooldown" type="Timer" parent="fuegofatuo"]
+wait_time = 0.05
+
+[node name="barra_vida_sombra" type="TextureProgressBar" parent="fuegofatuo"]
+offset_left = -32.0
+offset_top = -51.0
+offset_right = 32.0
+offset_bottom = -35.0
+max_value = 3.0
+value = 3.0
+texture_under = ExtResource("15_ady61")
+texture_progress = ExtResource("16_ovpkv")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="body_entered" from="fuegofatuo/AnimatedSprite2D/Area2D" to="fuegofatuo" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="fuegofatuo/AnimatedSprite2D/Area2D" to="fuegofatuo" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="fuegofatuo/hitbox_sombra" to="fuegofatuo" method="_on_hitbox_sombra_body_entered"]
+[connection signal="body_exited" from="fuegofatuo/hitbox_sombra" to="fuegofatuo" method="_on_hitbox_sombra_body_exited"]
+[connection signal="timeout" from="fuegofatuo/cooldown" to="fuegofatuo" method="_on_cooldown_timeout"]
